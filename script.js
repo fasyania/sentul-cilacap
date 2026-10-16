@@ -32,6 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
 // 2. BAGIAN PIC 1: INTERAKSI BERANDA (index.html)
 // Tuliskan kode JavaScript khusus halaman beranda di bawah baris ini:
 // ==========================================================================
+/* 2. BAGIAN PIC 1 */
+// Pengecekan elemen defensif untuk Modal Pop-Up Info Tiket
+const btnInfoTiket = document.getElementById('btn-info-tiket');
+const modalInfoTiket = document.getElementById('modal-info-tiket');
+const btnCloseModal = document.getElementById('btn-close-modal');
+
+if (btnInfoTiket && modalInfoTiket) {
+  // Buka modal saat tombol diklik
+  btnInfoTiket.addEventListener('click', function() {
+    modalInfoTiket.showModal();
+  });
+}
+
+if (btnCloseModal && modalInfoTiket) {
+  // Tutup modal saat tombol silang (x) diklik
+  btnCloseModal.addEventListener('click', function() {
+    modalInfoTiket.close();
+  });
+}
+
+if (modalInfoTiket) {
+  // Tutup modal jika pengguna mengklik area luar (backdrop)
+  modalInfoTiket.addEventListener('click', function(event) {
+    if (event.target === modalInfoTiket) {
+      modalInfoTiket.close();
+    }
+  });
+}
 
 
 // ==========================================================================
