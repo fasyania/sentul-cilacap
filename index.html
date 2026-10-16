@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - Tirta Sentul Waterpark & Hall Cilacap</title>
   <meta name="description" content="Destinasi renang semi-indoor sejuk di Cilacap. Bebas terik matahari langsung dan hujan.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,9 +15,8 @@
        ========================================================================= -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        <span>Tirta Sentul</span>
+      <a href="index.html" class="brand-logo" aria-label="Tirta Sentul Waterpark & Hall">
+        <img src="assets/images/logo.svg" alt="Tirta Sentul Waterpark & Hall" class="brand-logo-img">
       </a>
 
       <nav>
@@ -38,11 +38,70 @@
        Instruksi: Masukkan kode [BLOK 1: HTML] hasil generate AI di bawah ini.
        ========================================================================= -->
   <main id="main-content">
-    <section style="padding: 80px 0; text-align: center;">
-      <div class="container">
-        <h2>Area Kerja PIC 1: Halaman Beranda</h2>
-        <p style="margin-top: 10px; color: var(--text-muted);">Silakan masukkan kode HTML Beranda pada branch <code>fitur-beranda</code>.</p>
+    <!-- HERO SECTION -->
+<section class="home-hero">
+  <div class="container">
+    <div class="home-hero-layout">
+      <div class="home-hero-content">
+        <span class="home-hero-badge">🌟 Destinasi Wisata Keluarga Terbaik</span>
+        <h1 class="home-hero-title">Berenang Nyaman Bebas Panas di Jantung Cilacap</h1>
+        <p class="home-hero-desc">
+          Rasakan sensasi kesegaran berenang dengan fasilitas kolam semi-indoor di Tirta Sentul Waterpark & Hall. Dirancang khusus agar Anda dan keluarga dapat bermain air dengan sejuk, aman, dan sepenuhnya terbebas dari terik matahari.
+        </p>
+      <div class="home-hero-actions">
+        <a href="fasilitas.html" class="btn btn-primary">Lihat Fasilitas Lengkap</a>
+        <a href="https://maps.google.com/?q=Sentul+Waterpark+Cilacap" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Petunjuk Rute</a>
       </div>
+    </div>
+    <div class="home-hero-visual">
+      <img src="assets/images/indoor-pool.jpg" alt="Kolam Renang Semi-Indoor Tirta Sentul Cilacap" class="home-hero-img">
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- KEUNGGULAN SECTION -->
+  <section class="home-features">
+    <div class="container">
+      <div class="home-section-header">
+        <h2 class="home-section-title">Mengapa Memilih Tirta Sentul?</h2>
+        <p class="home-section-desc">Fasilitas unggulan yang kami sediakan untuk memastikan pengalaman liburan Anda tidak terlupakan.</p>
+      </div>
+      
+      <div class="home-features-grid">
+        <!-- Kartu 1 -->
+        <article class="home-card">
+          <div class="home-card-icon">🏊‍♂️</div>
+          <h3 class="home-card-title">Atap Semi-Indoor Bebas Terik</h3>
+          <p class="home-card-desc">Berenang kapan saja tanpa takut kulit terbakar matahari. Desain atap semi-indoor kami memastikan sirkulasi udara tetap sejuk dengan pencahayaan alami yang teduh.</p>
+        </article>
+
+        <!-- Kartu 2 -->
+        <article class="home-card">
+          <div class="home-card-icon">🏛️</div>
+          <h3 class="home-card-title">Fasad Megah Sentul Hall</h3>
+          <p class="home-card-desc">Tidak hanya wahana air, kami juga menghadirkan gedung aula serbaguna yang megah, representatif, dan cocok untuk berbagai acara istimewa Anda.</p>
+        </article>
+
+        <!-- Kartu 3 -->
+        <article class="home-card">
+          <div class="home-card-icon">✨</div>
+          <h3 class="home-card-title">Air Bersih & Terawat Higienis</h3>
+          <p class="home-card-desc">Sistem filtrasi canggih yang bekerja nonstop menjamin kualitas kejernihan dan kebersihan air kolam sehingga aman untuk kulit anak-anak maupun dewasa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+    <!-- CALL TO ACTION (CTA) SECTION -->
+    <section class="home-cta-banner">
+    <div class="container">
+      <div class="home-cta-content">
+        <h2 class="home-cta-title">Siap Menikmati Kesegaran Hari Ini?</h2>
+        <p class="home-cta-desc">Kunjungi kami di Jl. Gatot Subroto, Cilacap. Rencanakan liburan seru Anda dan keluarga sekarang juga!</p>
+        <button type="button" id="btn-info-tiket" class="btn btn-primary">Cek Jam Buka & Tiket</button>
+      </div>
+    </div>
     </section>
   </main>
 
