@@ -60,6 +60,7 @@ Untuk memastikan penilaian dosen (checklist Modul 6) mendapat nilai sempurna, **
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Nama Halaman] - Tirta Sentul Waterpark & Hall Cilacap</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -67,9 +68,8 @@ Untuk memastikan penilaian dosen (checklist Modul 6) mendapat nilai sempurna, **
   <!-- HEADER BERSAMA -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        <span>Tirta Sentul</span>
+      <a href="index.html" class="brand-logo" aria-label="Tirta Sentul Waterpark & Hall">
+        <img src="assets/images/logo.svg" alt="Tirta Sentul Waterpark & Hall" class="brand-logo-img">
       </a>
 
       <nav>
@@ -148,34 +148,44 @@ Untuk memastikan penilaian dosen (checklist Modul 6) mendapat nilai sempurna, **
 *Salin teks di bawah ini ke ChatGPT / Claude / Gemini untuk menghasilkan kode Beranda:*
 
 ```markdown
-Kamu adalah Frontend Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
-Tugasmu adalah membuat kode untuk halaman Beranda Tirta Sentul Cilacap dengan kualitas rapi, bersih, dan profesional.
+Kamu adalah Frontend UI/UX Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
+Tugasmu adalah merancang dan membuat kode untuk halaman Beranda Tirta Sentul Waterpark & Hall Cilacap dengan kualitas visual modern, estetis, rapi, dan mudah dipahami.
 
-BATASAN TEKNIS SANGAT KETAT (WAJIB PATUH 100%):
-1. Menggunakan HTML5 Semantik, CSS3 (Flexbox/Grid dasar, hover), dan Pure JavaScript DOM dasar.
-2. Dilarang menggunakan animasi rumit (IntersectionObserver, keyframe complex), library/CDN eksternal, atau inline style (style="...").
-3. ANTI-CSS BLEEDING: DILARANG men-styling tag telanjang (seperti h1, h2, p, img). Semua selector CSS WAJIB diawali prefix `.home-` (contoh: `.home-hero h1`, `.home-card p`, `.home-banner h2`).
-4. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
-5. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (element) { ... }` agar tidak error saat file script.js dimuat di halaman lain.
-6. Gunakan variabel warna yang sudah ada di proyek: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
-7. Gambar lokal yang digunakan WAJIB persis: `assets/images/indoor-pool.jpg`.
+PANDUAN DESAIN & INISIATIF KREATIF:
+1. Desain harus hidup, rapi, dan berbobot (hindari tampilan kaku/kosong).
+2. Setiap <section> WAJIB memiliki hierarki visual lengkap: ada Judul Seksi (<h2>), subjudul/pengantar singkat (<p>), baru kemudian konten utama (grid kartu atau banner).
+3. Kamu bebas menyusun copywriting yang memikat, persuasif, serta menambahkan badge atau ikon pemanis agar kartu terlihat profesional.
+
+PAGAR TEKNIS INTEGRASI (WAJIB DIPATUHI 100%):
+1. Menggunakan HTML5 Semantik, CSS3 murni (Flexbox/Grid dasar, hover effect halus), dan Pure JavaScript DOM dasar.
+2. Dilarang menggunakan animasi rumit (IntersectionObserver, scroll library), library/CDN eksternal, atau inline style (style="...").
+3. TOMBOL REUSABLE: Gunakan class tombol sistem yang sudah tersedia di proyek: `.btn .btn-primary` dan `.btn .btn-secondary`.
+   - CTA Utama Hero: WAJIB berupa link ke halaman fasilitas: `<a href="fasilitas.html" class="btn btn-primary">Lihat Fasilitas Lengkap</a>` (DILARANG mengarahkannya ke anchor #keunggulan).
+   - CTA Sekunder Hero: `<a href="https://maps.google.com/?q=Sentul+Waterpark+Cilacap" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Petunjuk Rute</a>`.
+   - DILARANG membuat class tombol baru (seperti .home-btn) dan JANGAN menulis ulang CSS tombol di stylesheet.
+4. ANTI-CSS BLEEDING: DILARANG men-styling selector tag telanjang (seperti h1, h2, p, img). Semua class CSS Beranda WAJIB diawali prefix `.home-` (contoh: `.home-hero`, `.home-section-header`, `.home-features`, `.home-card`, `.home-cta`).
+5. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
+6. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (element) { ... }` agar tidak error saat file script.js dimuat di halaman lain.
+7. Variabel warna proyek: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
+8. Aset gambar lokal: `assets/images/indoor-pool.jpg`.
 
 OUTPUT KODE YANG HARUS KAMU BERIKAN (BAGI DALAM 3 BLOK KODE TERPISAH):
 
 [BLOK 1: HTML BERANDA]
 Kode untuk di dalam tag <main id="main-content">...</main> di index.html:
-- Hero Section (Headline tentang sensasi renang semi-indoor sejuk bebas panas matahari di Cilacap, tombol ke fasilitas & Google Maps, foto kolam semi-indoor).
-- Section Keunggulan (3 kartu: Atap Semi-Indoor, Fasad Megah Sentul Hall, Air Jernih Terawat).
-- Callout Banner (Ajakan berkunjung ke Jl. Gatot Subroto Cilacap + tombol interaksi dengan id="btn-info-tiket").
+- Hero Section: Layout 2 kolom (teks persuasif tentang sensasi renang semi-indoor sejuk bebas panas terik matahari di Cilacap, tombol CTA ke fasilitas.html & Google Maps, serta foto `assets/images/indoor-pool.jpg`).
+- Section Keunggulan: Header seksi (judul <h2> dan pengantar <p>), diikuti Grid 3 Kartu Keunggulan (1. Atap Semi-Indoor Bebas Terik, 2. Fasad Megah Sentul Hall, 3. Air Bersih & Terawat Higienis).
+- Section Callout / CTA: Banner ajakan berkunjung ke Jl. Gatot Subroto Cilacap + tombol interaksi: `<button type="button" id="btn-info-tiket" class="btn btn-primary">Cek Jam Buka & Tiket</button>`.
 
 [BLOK 2: CSS KHUSUS BERANDA]
 Kode CSS untuk di-copy ke zona /* 5. BAGIAN PIC 1: HALAMAN BERANDA */ di style.css:
-- Gunakan class ber-prefix .home- (seperti .home-hero, .home-cards-grid, .home-card).
-- Gunakan Flexbox atau Grid sederhana dengan margin, padding, border-radius 8px, dan efek hover kartu terangkat sedikit.
+- Gunakan class ber-prefix .home- (contoh: .home-hero, .home-section-header, .home-features, .home-card, .home-cta).
+- Layout menggunakan Flexbox / CSS Grid sederhana, padding seksi proporsional (misal 50px-60px), kartu dengan border-radius (8px-12px), box-shadow lembut, dan efek hover kartu naik sedikit (`transform: translateY(-4px)`).
+- JANGAN menulis ulang CSS tombol (.btn).
 
 [BLOK 3: JAVASCRIPT DOM DASAR]
 Kode JavaScript untuk di-copy ke zona /* 2. BAGIAN PIC 1 */ di script.js:
-- 1 fungsi dengan document.getElementById('btn-info-tiket') dan addEventListener('click') yang menampilkan alert informasi harga tiket (Weekday Rp 15rb, Weekend Rp 20rb) dan jam operasional. Wajib gunakan pengecekan `if (btnInfoTiket)`.
+- 1 fungsi dengan document.getElementById('btn-info-tiket') dan addEventListener('click') yang menampilkan alert informasi harga tiket (Weekday Rp 15.000, Weekend Rp 20.000) dan jam operasional. Wajib gunakan pengecekan defensive `if (btnInfoTiket)`.
 ```
 
 ---
@@ -185,35 +195,43 @@ Kode JavaScript untuk di-copy ke zona /* 2. BAGIAN PIC 1 */ di script.js:
 *Salin teks di bawah ini ke ChatGPT / Claude / Gemini untuk menghasilkan kode Tentang Kami:*
 
 ```markdown
-Kamu adalah Frontend Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
-Tugasmu adalah membuat kode untuk halaman Tentang Kami Tirta Sentul Cilacap dengan kualitas rapi, bersih, dan berbobot.
+Kamu adalah Frontend UI/UX Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
+Tugasmu adalah merancang dan membuat kode untuk halaman Tentang Kami Tirta Sentul Cilacap dengan kualitas rapi, berbobot, dan menarik.
 
-BATASAN TEKNIS SANGAT KETAT (WAJIB PATUH 100%):
-1. Menggunakan HTML5 Semantik, CSS3 (Flexbox/Grid dasar, hover), dan Pure JavaScript DOM dasar.
+PANDUAN DESAIN & INISIATIF KREATIF:
+1. Tampilkan citra tempat rekreasi keluarga dan olahraga yang berkelas serta terpercaya.
+2. Setiap <section> WAJIB memiliki hierarki visual jelas: Judul (<h1>/<h2>), pengantar singkat, dan konten terstruktur.
+3. Berikan sentuhan desain yang bersih pada narasi profil, tombol interaktif, dan kartu nilai perusahaan.
+
+PAGAR TEKNIS INTEGRASI (WAJIB DIPATUHI 100%):
+1. Menggunakan HTML5 Semantik, CSS3 murni (Flexbox/Grid dasar, hover), dan Pure JavaScript DOM dasar.
 2. Dilarang menggunakan animasi rumit, library/CDN eksternal, atau inline style (style="...").
-3. ANTI-CSS BLEEDING: DILARANG men-styling tag telanjang (seperti h1, h2, p, img). Semua selector CSS WAJIB diawali prefix `.about-` (contoh: `.about-hero h1`, `.about-text p`, `.about-value-box h3`).
-4. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
-5. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (element) { ... }` agar tidak error saat file script.js dimuat di halaman lain.
-6. Gunakan variabel warna yang sudah ada: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
-7. Gambar lokal yang digunakan WAJIB persis: `assets/images/facade-entrance.jpg`.
+3. TOMBOL REUSABLE: Gunakan class tombol bersama: `class="btn btn-secondary"`. DILARANG membuat class tombol baru seperti .about-btn dan JANGAN menulis ulang CSS tombol di stylesheet.
+4. ANTI-INLINE STYLE: Kotak visi-misi (`id="box-visi-misi"`) harus disembunyikan secara default menggunakan class CSS `.about-hidden { display: none; }` (DILARANG menggunakan style="display:none" di HTML). Di JS, lakukan toggle class `.about-hidden` saat tombol diklik.
+5. ANTI-CSS BLEEDING: DILARANG men-styling selector tag telanjang (seperti h1, h2, p, img). Semua selector CSS WAJIB diawali prefix `.about-` (contoh: `.about-hero`, `.about-profile`, `.about-values`, `.about-card`).
+6. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
+7. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (element) { ... }` agar tidak error saat file script.js dimuat di halaman lain.
+8. Variabel warna proyek: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
+9. Aset gambar lokal: `assets/images/facade-entrance.jpg`.
 
 OUTPUT KODE YANG HARUS KAMU BERIKAN (BAGI DALAM 3 BLOK KODE TERPISAH):
 
 [BLOK 1: HTML TENTANG KAMI]
 Kode untuk di dalam tag <main id="main-content">...</main> di tentang.html:
-- Hero Subpage (Judul "Mengenal Tirta Sentul Cilacap").
-- Profil & Kisah (Layout 2 kolom: foto fasad pilar Romawi megah Sentul Hall di kiri, cerita komitmen kolam semi-indoor teduh di kanan).
-- Tombol Interaksi (Tombol dengan id="btn-toggle-visi" dan div dengan id="box-visi-misi" untuk menampilkan visi-misi).
-- 3 Box Nilai Utama (Kenyamanan Teduh, Standar Olahraga, Tarif Terjangkau).
+- Hero Subpage: Banner judul halaman ("Mengenal Tirta Sentul Cilacap") dan deskripsi pengantar.
+- Profil & Komitmen: Layout 2 kolom (kiri: foto fasad pilar Romawi megah `assets/images/facade-entrance.jpg`; kanan: cerita komitmen menghadirkan kolam semi-indoor teduh dan hall serbaguna untuk warga Cilacap).
+- Interaksi Visi & Misi: Letakkan di kolom teks profil, berupa tombol: `<button type="button" id="btn-toggle-visi" class="btn btn-secondary">Lihat Visi & Misi Kami</button>` dan kotak konten `<div id="box-visi-misi" class="about-hidden">...</div>` (berisi poin visi dan misi Tirta Sentul).
+- Section Nilai Utama: Header seksi (judul <h2> dan pengantar <p>) + Grid 3 Kotak Nilai (1. Kenyamanan Teduh, 2. Standar Olahraga & Edukasi, 3. Rekreasi Terjangkau).
 
 [BLOK 2: CSS KHUSUS TENTANG KAMI]
 Kode CSS untuk di-copy ke zona /* 6. BAGIAN PIC 2: HALAMAN TENTANG KAMI */ di style.css:
-- Gunakan class ber-prefix .about- (seperti .about-hero, .about-grid, .about-value-box).
-- Gunakan Flexbox atau Grid sederhana dengan padding dan border-radius rapi.
+- Wajib sertakan rule helper: `.about-hidden { display: none; }`.
+- Gunakan class ber-prefix .about- (contoh: .about-hero, .about-profile, .about-box, .about-card).
+- Layout rapi menggunakan Flexbox atau CSS Grid sederhana dengan padding seksi yang nyaman dan hover efek halus pada kartu nilai. JANGAN menulis ulang CSS tombol (.btn).
 
 [BLOK 3: JAVASCRIPT DOM DASAR]
 Kode JavaScript untuk di-copy ke zona /* 3. BAGIAN PIC 2 */ di script.js:
-- 1 fungsi interaksi DOM untuk tombol id="btn-toggle-visi" yang melakukan toggle (tampil/sembunyi) pada elemen id="box-visi-misi" saat diklik. Wajib gunakan pengecekan `if (btnToggleVisi && boxVisiMisi)`.
+- 1 fungsi interaksi DOM untuk tombol id="btn-toggle-visi" yang melakukan toggle class `.about-hidden` pada elemen id="box-visi-misi" saat diklik, serta mengubah teks tombol antara "Lihat Visi & Misi Kami" dan "Sembunyikan Visi & Misi". Wajib gunakan pengecekan defensif `if (btnToggleVisi && boxVisiMisi)`.
 ```
 
 ---
@@ -223,36 +241,42 @@ Kode JavaScript untuk di-copy ke zona /* 3. BAGIAN PIC 2 */ di script.js:
 *Salin teks di bawah ini ke ChatGPT / Claude / Gemini untuk menghasilkan kode Fasilitas:*
 
 ```markdown
-Kamu adalah Frontend Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
-Tugasmu adalah membuat kode untuk halaman Fasilitas Tirta Sentul Cilacap dengan kualitas rapi, informatif, dan terstruktur.
+Kamu adalah Frontend UI/UX Developer mahasiswa tingkat 2 mata kuliah Pemrograman Web Dasar. 
+Tugasmu adalah merancang dan membuat kode untuk halaman Fasilitas Tirta Sentul Cilacap dengan kualitas visual rapi, informatif, dan terstruktur.
 
-BATASAN TEKNIS SANGAT KETAT (WAJIB PATUH 100%):
-1. Menggunakan HTML5 Semantik, CSS3 (Flexbox/Grid dasar, hover), dan Pure JavaScript DOM dasar.
+PANDUAN DESAIN & INISIATIF KREATIF:
+1. Buat katalog fasilitas terlihat menarik layaknya destinasi wisata modern.
+2. Setiap <section> WAJIB memiliki hierarki visual lengkap: Judul seksi (<h2>), pengantar singkat (<p>), baru kemudian grid katalog atau tabel HTM.
+3. Setiap kartu fasilitas memiliki foto, judul fasilitas, deskripsi singkat, dan tombol interaksi.
+
+PAGAR TEKNIS INTEGRASI (WAJIB DIPATUHI 100%):
+1. Menggunakan HTML5 Semantik, CSS3 murni (Flexbox/Grid dasar, hover), dan Pure JavaScript DOM dasar.
 2. Dilarang menggunakan animasi rumit, library/CDN eksternal, atau inline style (style="...").
-3. ANTI-CSS BLEEDING: DILARANG men-styling tag telanjang (seperti h1, h2, p, img). Semua selector CSS WAJIB diawali prefix `.facility-` (contoh: `.facility-hero h1`, `.facility-card h3`, `.facility-price-box h4`).
-4. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
-5. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (element) { ... }` agar tidak error saat file script.js dimuat di halaman lain.
-6. Gunakan variabel warna yang sudah ada: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
-7. Gambar lokal yang digunakan WAJIB persis:
-   - `assets/images/indoor-pool.jpg` (Kolam Lintasan Semi-Indoor)
-   - `assets/images/facade-entrance.jpg` (Sentul Hall Venue Fasad Megah)
-   - `assets/images/waterpark-slides.jpg` (Wahana Waterpark & Ember Tumpah)
-   - `assets/images/relax-gazebo.jpg` (Gazebo & Lounge Santai Tepi Kolam)
+3. TOMBOL REUSABLE: Gunakan class tombol bersama: `class="btn btn-secondary btn-detail-fasilitas"`. DILARANG membuat class tombol baru dan JANGAN menulis ulang CSS tombol di stylesheet.
+4. ANTI-CSS BLEEDING: DILARANG men-styling selector tag telanjang (seperti h1, h2, p, img). Semua selector CSS WAJIB diawali prefix `.facility-` (contoh: `.facility-hero`, `.facility-grid`, `.facility-card`, `.facility-pricing`).
+5. WRAPPER CONTAINER: Setiap <section> di dalam <main> WAJIB membungkus isinya dengan `<div class="container">` agar lebarnya sejajar dengan navbar dan footer.
+6. DEFENSIVE JAVASCRIPT: Kode JS WAJIB mengecek keberadaan elemen terlebih dahulu dengan `if (elements.length > 0)` agar tidak error saat file script.js dimuat di halaman lain.
+7. Variabel warna proyek: var(--primary-color), var(--navy-color), var(--bg-light), var(--white).
 
 OUTPUT KODE YANG HARUS KAMU BERIKAN (BAGI DALAM 3 BLOK KODE TERPISAH):
 
 [BLOK 1: HTML FASILITAS]
 Kode untuk di dalam tag <main id="main-content">...</main> di fasilitas.html:
-- Hero Subpage (Judul "Fasilitas & Wahana Tirta Sentul").
-- Katalog 4 Fasilitas (Grid 2 kolom / 4 kartu: tiap kartu memuat foto, nama fasilitas, deskripsi singkat, dan tombol rincian dengan class="btn-detail-fasilitas").
-- Bagian Informasi HTM (Tabel / 2 kotak harga: Weekday Rp 15.000 dan Weekend Rp 20.000).
+- Hero Subpage: Banner judul halaman ("Fasilitas & Wahana Tirta Sentul") dan deskripsi pengantar.
+- Katalog 4 Fasilitas Unggulan: Header seksi (judul <h2> dan pengantar <p>) + Grid 2 kolom / 4 kartu fasilitas dengan pemetaan gambar dan atribut data-info persis berikut:
+  1. Kartu 1 (Kolam Lintasan Semi-Indoor): gambar `assets/images/indoor-pool.jpg`, tombol `<button type="button" class="btn btn-secondary btn-detail-fasilitas" data-info="Kolam beratap kanopi teduh dengan 6 lintasan renang atletik dan kedalaman bertingkat 1 hingga 2 meter.">Detail Fasilitas</button>`
+  2. Kartu 2 (Sentul Hall Venue): gambar `assets/images/facade-entrance.jpg`, tombol `<button type="button" class="btn btn-secondary btn-detail-fasilitas" data-info="Gedung pertemuan aula megah berpilar klasik Romawi dengan kapasitas ratusan tamu dan area parkir sangat luas.">Detail Fasilitas</button>`
+  3. Kartu 3 (Waterpark & Ember Tumpah): gambar `assets/images/waterpark-slides.jpg`, tombol `<button type="button" class="btn btn-secondary btn-detail-fasilitas" data-info="Wahana air ceria untuk keluarga dengan seluncuran berkelok, ember tumpah raksasa, dan kolam dangkal aman.">Detail Fasilitas</button>`
+  4. Kartu 4 (Gazebo & Lounge Tepi Kolam): gambar `assets/images/relax-gazebo.jpg`, tombol `<button type="button" class="btn btn-secondary btn-detail-fasilitas" data-info="Area istirahat teduh dilengkapi gazebo kayu bersih dan kursi malas modern yang bebas digunakan pengunjung.">Detail Fasilitas</button>`
+- Section Informasi HTM & Jam Buka: Header seksi (judul <h2> dan pengantar <p>) + 2 kotak/tabel harga tiket (Weekday: Rp 15.000 / orang, Weekend: Rp 20.000 / orang).
 
 [BLOK 2: CSS KHUSUS FASILITAS]
 Kode CSS untuk di-copy ke zona /* 7. BAGIAN PIC 3: HALAMAN FASILITAS */ di style.css:
-- Gunakan class ber-prefix .facility- (seperti .facility-grid, .facility-card, .facility-price-box).
-- Gunakan CSS Grid atau Flexbox sederhana dengan efek hover kartu terangkat sedikit.
+- Gunakan class ber-prefix .facility- (contoh: .facility-hero, .facility-grid, .facility-card, .facility-pricing).
+- Terapkan CSS Grid atau Flexbox responsif, kartu dengan border-radius, overflow hidden agar gambar rapi, dan efek hover kartu terangkat sedikit. JANGAN menulis ulang CSS tombol (.btn).
 
 [BLOK 3: JAVASCRIPT DOM DASAR]
 Kode JavaScript untuk di-copy ke zona /* 4. BAGIAN PIC 3 */ di script.js:
-- Interaksi tombol pada kartu fasilitas yang menampilkan alert/pesan detail fasilitas saat diklik. Wajib gunakan querySelectorAll dan pengecekan elemen.
+- Ambil semua tombol dengan `const detailBtns = document.querySelectorAll('.btn-detail-fasilitas');`.
+- Cek defensif `if (detailBtns.length > 0)`, lalu pasang perulangan `forEach`: saat tombol diklik, ambil data teks dari `btn.getAttribute('data-info')` dan tampilkan menggunakan `alert(info)`.
 ```
