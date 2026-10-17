@@ -67,9 +67,13 @@ if (modalInfoTiket) {
 // Tuliskan kode JavaScript khusus halaman tentang kami di bawah baris ini:
 // ==========================================================================
 
-
-// ==========================================================================
-// 4. BAGIAN PIC 3: INTERAKSI FASILITAS (fasilitas.html)
-// Tuliskan kode JavaScript khusus halaman fasilitas di bawah baris ini:
-// ==========================================================================
-
+// ===== BAGIAN PIC 3: HALAMAN FASILITAS =====
+const detailBtns = document.querySelectorAll('.btn-detail-fasilitas');
+if (detailBtns.length > 0) {
+  detailBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const info = btn.getAttribute('data-info');
+      alert(info);
+    });
+  });
+}
