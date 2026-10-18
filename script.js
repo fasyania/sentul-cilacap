@@ -62,10 +62,17 @@ if (modalInfoTiket) {
 }
 
 
-// ==========================================================================
-// 3. BAGIAN PIC 2: INTERAKSI TENTANG KAMI (tentang.html)
-// Tuliskan kode JavaScript khusus halaman tentang kami di bawah baris ini:
-// ==========================================================================
+/* ==========================================================================
+   3. BAGIAN PIC 2: HALAMAN TENTANG KAMI
+   ========================================================================== */
+
+const btnToggleVisi = document.getElementById('btn-toggle-visi');
+const boxVisiMisi = document.getElementById('box-visi-misi');
+
+// Defensive JavaScript check
+if (btnToggleVisi && boxVisiMisi) {
+  btnToggleVisi.addEventListener('click', function () {
+    boxVisiMisi.classList.toggle('about-hidden');
 
 // ===== BAGIAN PIC 3: HALAMAN FASILITAS =====
 const detailBtns = document.querySelectorAll('.btn-detail-fasilitas');
@@ -77,3 +84,16 @@ if (detailBtns.length > 0) {
     });
   });
 }
+    if (boxVisiMisi.classList.contains('about-hidden')) {
+      btnToggleVisi.textContent = 'Lihat Visi & Misi Kami';
+    } else {
+      btnToggleVisi.textContent = 'Sembunyikan Visi & Misi';
+    }
+  });
+}
+
+// ==========================================================================
+// 4. BAGIAN PIC 3: INTERAKSI FASILITAS (fasilitas.html)
+// Tuliskan kode JavaScript khusus halaman fasilitas di bawah baris ini:
+// ==========================================================================
+
