@@ -324,6 +324,123 @@ img {
   font-size: 0.95rem;
 }
 
+/* TESTIMONIALS SECTION (GOOGLE MAPS REVIEWS) */
+.home-testimonials {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.home-testimonial-badge {
+  display: inline-block;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  border: 1px solid #fde68a;
+}
+
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.home-testimonial-card {
+  background-color: var(--white);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.home-testimonial-stars {
+  color: #f59e0b;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.home-testimonial-quote {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.home-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.home-testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--navy-color));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.home-testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-testimonial-name {
+  color: var(--navy-color);
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.home-testimonial-role {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.home-testimonial-footer {
+  text-align: center;
+}
+
+.home-testimonial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.home-testimonial-link:hover {
+  color: var(--navy-color);
+  text-decoration: underline;
+}
+
 .home-cta-banner {
   padding: 60px 0;
   background-color: var(--navy-color);
@@ -466,7 +583,8 @@ img {
     font-size: 2.2rem;
   }
 
-  .home-highlights-grid {
+  .home-highlights-grid,
+  .home-testimonials-grid {
     grid-template-columns: 1fr;
   }
 
