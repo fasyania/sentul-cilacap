@@ -31,28 +31,23 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==========================================================================
 // 2. BAGIAN PIC 1: INTERAKSI BERANDA (index.html)
 // ==========================================================================
-/* 2. BAGIAN PIC 1 */
-// Pengecekan elemen defensif untuk Modal Pop-Up Info Tiket
 const btnInfoTiket = document.getElementById('btn-info-tiket');
 const modalInfoTiket = document.getElementById('modal-info-tiket');
 const btnCloseModal = document.getElementById('btn-close-modal');
 
 if (btnInfoTiket && modalInfoTiket) {
-  // Buka modal saat tombol diklik
   btnInfoTiket.addEventListener('click', function() {
     modalInfoTiket.showModal();
   });
 }
 
 if (btnCloseModal && modalInfoTiket) {
-  // Tutup modal saat tombol silang (x) diklik
   btnCloseModal.addEventListener('click', function() {
     modalInfoTiket.close();
   });
 }
 
 if (modalInfoTiket) {
-  // Tutup modal jika pengguna mengklik area luar (backdrop)
   modalInfoTiket.addEventListener('click', function(event) {
     if (event.target === modalInfoTiket) {
       modalInfoTiket.close();
@@ -66,7 +61,6 @@ if (modalInfoTiket) {
 const btnToggleVisi = document.getElementById('btn-toggle-visi');
 const boxVisiMisi = document.getElementById('box-visi-misi');
 
-// Defensive JavaScript check
 if (btnToggleVisi && boxVisiMisi) {
   btnToggleVisi.addEventListener('click', function () {
     boxVisiMisi.classList.toggle('about-hidden');
