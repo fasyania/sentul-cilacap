@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Kami - Tirta Sentul Waterpark & Hall Cilacap</title>
-  <meta name="description" content="Kisah, filosofi, dan komitmen Tirta Sentul Cilacap dalam menyediakan sarana renang yang sejuk dan nyaman.">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- =========================================================================
-       CANONICAL HEADER (DIKELOLA OLEH KETUA / PM)
-       ========================================================================= -->
+  <!-- HEADER BERSAMA -->
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="brand-logo" aria-label="Tirta Sentul Waterpark & Hall">
@@ -33,22 +30,84 @@
     </div>
   </header>
 
-  <!-- =========================================================================
-       MAIN CONTENT: AREA KERJA KHUSUS PIC 2 (TENTANG KAMI)
-       Instruksi: Masukkan kode [BLOK 1: HTML] hasil generate AI di bawah ini.
-       ========================================================================= -->
+  <!-- =======================================================================
+       AREA KERJA PIC 2: HALAMAN TENTANG KAMI
+       ======================================================================= -->
   <main id="main-content">
-    <section style="padding: 80px 0; text-align: center;">
+    <!-- Hero Subpage -->
+    <section class="about-hero">
       <div class="container">
-        <h2>Area Kerja PIC 2: Halaman Tentang Kami</h2>
-        <p style="margin-top: 10px; color: var(--text-muted);">Silakan masukkan kode HTML Tentang Kami pada branch <code>fitur-tentang</code>.</p>
+        <h1 class="about-hero-title">Mengenal Tirta Sentul Cilacap</h1>
+        <p class="about-hero-subtitle">Destinasi rekreasi air semi-indoor dan arena olahraga terpadu yang menghadirkan kenyamanan, keteduhan, serta kebersamaan keluarga di Kabupaten Cilacap.</p>
+      </div>
+    </section>
+
+    <!-- Profil & Komitmen -->
+    <section class="about-profile">
+      <div class="container about-profile-grid">
+        <div class="about-profile-image-wrap">
+          <img src="assets/images/facade-entrance.jpg" alt="Fasad Pilar Romawi Tirta Sentul Hall" class="about-profile-img">
+        </div>
+        <div class="about-profile-content">
+          <h2 class="about-profile-title">Ikon Rekreasi Teduh & Megah di Cilacap</h2>
+          <p class="about-profile-text">
+            Tirta Sentul Cilacap hadir dengan konsep unik yang menggabungkan arena rekreasi air beratap kanopi sejuk dan gedung aula (*hall*) berarsitektur pilar klasik yang megah. Kami memahami kebutuhan masyarakat Cilacap akan tempat berenang yang bebas dari terik matahari langsung.
+          </p>
+          <p class="about-profile-text">
+            Dengan fasilitas yang terus dirawat secara berkala dan standar kebersihan air yang ketat, kami berkomitmen menjadi ruang publik yang aman untuk olahraga, edukasi renang, hingga acara spesial keluarga Anda.
+          </p>
+
+          <div class="about-actions">
+            <button type="button" id="btn-toggle-visi" class="btn btn-secondary">Lihat Visi & Misi Kami</button>
+          </div>
+
+          <div id="box-visi-misi" class="about-hidden about-box-visi">
+            <h3 class="about-visi-title">Visi Kami</h3>
+            <p class="about-visi-text">Menjadi kawasan rekreasi air dan fasilitas publik terdepan di Cilacap yang mengedepankan kenyamanan, keamanan, dan pelayanan ramah keluarga.</p>
+            
+            <h3 class="about-misi-title">Misi Kami</h3>
+            <ul class="about-misi-list">
+              <li>Menyediakan fasilitas kolam renang semi-indoor yang bersih, higienis, dan sejuk.</li>
+              <li>Menyediakan venue hall berkapasitas besar untuk mendukung berbagai kegiatan masyarakat dan acara formal.</li>
+              <li>Memberikan pelayanan terbaik dengan harga tiket yang terjangkau bagi seluruh lapisan masyarakat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nilai Utama -->
+    <section class="about-values">
+      <div class="container">
+        <div class="about-section-header">
+          <h2 class="about-section-title">Nilai-Nilai Utama Kami</h2>
+          <p class="about-section-subtitle">Komitmen yang selalu kami pegang teguh dalam melayani pengunjung Tirta Sentul Cilacap.</p>
+        </div>
+
+        <div class="about-values-grid">
+          <div class="about-card">
+            <div class="about-card-badge">01</div>
+            <h3 class="about-card-title">Kenyamanan Teduh</h3>
+            <p class="about-card-text">Atap pelindung kanopi memastikan pengunjung dapat berenang kapan saja tanpa perlu khawatir kepanasan atau kulit terbakar sinar matahari.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-badge">02</div>
+            <h3 class="about-card-title">Standar Olahraga & Edukasi</h3>
+            <p class="about-card-text">Dilengkapi lintasan renang yang sesuai standar untuk latihan atlet, sekolah, maupun pembelajaran renang pemula.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-badge">03</div>
+            <h3 class="about-card-title">Rekreasi Terjangkau</h3>
+            <p class="about-card-text">Menyajikan wahana rekreasi air yang lengkap dan venue acara terpadu dengan tiket masuk yang sangat bersahabat bagi keluarga.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================================================================
-       CANONICAL FOOTER (DIKELOLA OLEH KETUA / PM)
-       ========================================================================= -->
+  <!-- FOOTER BERSAMA -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-col">
