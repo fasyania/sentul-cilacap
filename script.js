@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ==========================================================================
 // 2. BAGIAN PIC 1: INTERAKSI BERANDA (index.html)
-// Tuliskan kode JavaScript khusus halaman beranda di bawah baris ini:
 // ==========================================================================
 /* 2. BAGIAN PIC 1 */
 // Pengecekan elemen defensif untuk Modal Pop-Up Info Tiket
@@ -61,13 +60,28 @@ if (modalInfoTiket) {
   });
 }
 
+// ==========================================================================
+// 3. BAGIAN PIC 2: HALAMAN TENTANG KAMI (tentang.html)
+// ==========================================================================
+const btnToggleVisi = document.getElementById('btn-toggle-visi');
+const boxVisiMisi = document.getElementById('box-visi-misi');
+
+// Defensive JavaScript check
+if (btnToggleVisi && boxVisiMisi) {
+  btnToggleVisi.addEventListener('click', function () {
+    boxVisiMisi.classList.toggle('about-hidden');
+
+    if (boxVisiMisi.classList.contains('about-hidden')) {
+      btnToggleVisi.textContent = 'Lihat Visi & Misi Kami';
+    } else {
+      btnToggleVisi.textContent = 'Sembunyikan Visi & Misi';
+    }
+  });
+}
 
 // ==========================================================================
-// 3. BAGIAN PIC 2: INTERAKSI TENTANG KAMI (tentang.html)
-// Tuliskan kode JavaScript khusus halaman tentang kami di bawah baris ini:
+// 4. BAGIAN PIC 3: INTERAKSI FASILITAS (fasilitas.html)
 // ==========================================================================
-
-// ===== BAGIAN PIC 3: HALAMAN FASILITAS =====
 const detailBtns = document.querySelectorAll('.btn-detail-fasilitas');
 if (detailBtns.length > 0) {
   detailBtns.forEach(btn => {
